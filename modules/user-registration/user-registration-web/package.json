@@ -1,0 +1,44 @@
+{
+	"name": "com.churchmutual.user.registration.web",
+	"version": "1.0.2",
+	"description": "CMIC User Registration Web",
+	"devDependencies": {
+		"babel-cli": "6.26.0",
+		"babel-loader": "7.1.5",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "1.7.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "6.24.1",
+		"copy-webpack-plugin": "4.6.0",
+		"liferay-npm-build-support": "^2.18.8",
+		"liferay-npm-bundler": "^2.18.8",
+		"webpack": "4.29.6",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	},
+	"dependencies": {
+		"@clayui/button": "^3.3.0",
+		"@clayui/form": "^3.6.0",
+		"@clayui/layout": "^3.1.0",
+		"@clayui/link": "^3.1.1",
+		"react": "16.8.6",
+		"react-dom": "16.8.6",
+		"react-input-mask": "^2.0.4"
+	},
+	"scripts": {
+		"build": "babel --source-maps -d build src && npm run copy-assets && liferay-npm-bundler",
+		"copy-assets": "lnbs-copy-assets",
+		"translate": "lnbs-translate",
+		"deploy": "npm run build && lnbs-deploy",
+		"start": "lnbs-start"
+	},
+	"portlet": {
+		"com.liferay.portlet.display-category": "category.churchmutual",
+		"com.liferay.portlet.instanceable": true,
+		"javax.portlet.name": "com_churchmutual_user_registration_web_portlet_UserRegistrationWebPortlet",
+		"javax.portlet.security-role-ref": "power-user,user",
+		"javax.portlet.resource-bundle": "content.Language"
+	},
+	"main": "index.js"
+}

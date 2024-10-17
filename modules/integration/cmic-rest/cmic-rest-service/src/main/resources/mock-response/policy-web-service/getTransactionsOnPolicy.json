@@ -1,0 +1,98 @@
+[
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	},
+	{
+		"accountNumber": "0000015",
+		"cmicTransactionType": "01",
+		"eventType": "01",
+		"policyNumber": "008765",
+		"policyType": "09",
+		"product": "09",
+		"sequenceNumber": 1,
+		"sourceSystem": "QSCMIC",
+		"transactionCommitTimestamp": "2018-10-09T07:23:22",
+		"transactionEffectiveDate": "2018-11-01"
+	}
+]

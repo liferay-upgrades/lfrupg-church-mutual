@@ -1,0 +1,67 @@
+[
+  {
+    "refAbrreviation": null,
+    "refDescription": "Invalid Value",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refCompanyId": -1,
+    "addressLine1": null,
+    "addressLine2": null,
+    "city": null,
+    "state": null,
+    "postalCode": null,
+    "naic": null
+  },
+  {
+    "refAbrreviation": "CMIC",
+    "refDescription": "Church Mutual Insurance Company, S.I.",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refCompanyId": 1,
+    "addressLine1": "3000 Schuster Lane",
+    "addressLine2": "P.O. Box 357",
+    "city": "Merrill",
+    "state": "WI",
+    "postalCode": "54452",
+    "naic": "18767"
+  },
+  {
+    "refAbrreviation": "CMRI",
+    "refDescription": "CM Regent Insurance Company",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refCompanyId": 2,
+    "addressLine1": null,
+    "addressLine2": null,
+    "city": null,
+    "state": null,
+    "postalCode": null,
+    "naic": null
+  },
+  {
+    "refAbrreviation": "CMVA",
+    "refDescription": "CM Vantage Specialty Insurance Company",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refCompanyId": 3,
+    "addressLine1": null,
+    "addressLine2": null,
+    "city": null,
+    "state": null,
+    "postalCode": null,
+    "naic": null
+  },
+  {
+    "refAbrreviation": "CMSL",
+    "refDescription": "CM Select Insurance Company",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refCompanyId": 4,
+    "addressLine1": null,
+    "addressLine2": null,
+    "city": null,
+    "state": null,
+    "postalCode": null,
+    "naic": null
+  }
+]

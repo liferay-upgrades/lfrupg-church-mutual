@@ -1,0 +1,26 @@
+[
+	{
+		"createdAt": "2020-09-08T12:31:35.837",
+		"id": 1087,
+		"registrationCode": "V4YfD72T",
+		"registrationExpirationDate": "2020-10-08",
+		"registrationExpired": true,
+		"registrationStatus": "Registered",
+		"updatedAt": "2020-09-08T12:31:35.837",
+		"userType": "Insured",
+		"uuid": "a57ee189-128f-439a-9753-2f5383f3017d",
+		"valid": false
+	},
+	{
+		"createdAt": "2020-09-08T12:31:35.823",
+		"id": 1096,
+		"registrationCode": "6P89RZSA",
+		"registrationExpirationDate": "2020-10-08",
+		"registrationExpired": true,
+		"registrationStatus": "Registered",
+		"updatedAt": "2020-09-08T12:31:35.823",
+		"userType": "Insured",
+		"uuid": "35b3da2e-e682-4dbd-973b-efea7b7c44ad",
+		"valid": false
+	}
+]

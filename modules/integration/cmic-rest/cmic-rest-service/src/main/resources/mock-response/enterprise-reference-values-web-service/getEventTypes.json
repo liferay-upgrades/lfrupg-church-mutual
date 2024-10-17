@@ -1,0 +1,86 @@
+[
+  {
+    "refAbrreviation": null,
+    "refDescription": "Invalid Value ",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": -1
+  },
+  {
+    "refAbrreviation": "01",
+    "refDescription": "New Business",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 1
+  },
+  {
+    "refAbrreviation": "02",
+    "refDescription": "Renewal",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 2
+  },
+  {
+    "refAbrreviation": "03",
+    "refDescription": "Premium Endorsement",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 3
+  },
+  {
+    "refAbrreviation": "21",
+    "refDescription": "Non-Premium Endorsement",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 4
+  },
+  {
+    "refAbrreviation": "05",
+    "refDescription": "Flat Cancel",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 5
+  },
+  {
+    "refAbrreviation": "06",
+    "refDescription": "Cancel",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 6
+  },
+  {
+    "refAbrreviation": "09",
+    "refDescription": "Reinstate",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 7
+  },
+  {
+    "refAbrreviation": "18",
+    "refDescription": "Non-Renewal",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 8
+  },
+  {
+    "refAbrreviation": "07",
+    "refDescription": "Premium Audit",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 9
+  },
+  {
+    "refAbrreviation": "16",
+    "refDescription": "Installment",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 10
+  },
+  {
+    "refAbrreviation": "17",
+    "refDescription": "Annualization",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refEventTypeId": 11
+  }
+]

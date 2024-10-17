@@ -1,0 +1,82 @@
+[
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Remitt Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A18I10A90641C0000318 A18I10A90641C000031 14 1285",
+		"statementDate": "2024-04-01",
+		"statementId": "C000000015795"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Remitt Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1286",
+		"statementDate": "2024-03-01",
+		"statementId": "C000000015796"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Remitt Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1287",
+		"statementDate": "2024-02-01",
+		"statementId": "C000000015797"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Remitt Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1288",
+		"statementDate": "2024-01-01",
+		"statementId": "C000000015798"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1289",
+		"statementDate": "2024-12-01",
+		"statementId": "C000000015799"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1290",
+		"statementDate": "2024-11-01",
+		"statementId": "C000000015780"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1291",
+		"statementDate": "2024-10-01",
+		"statementId": "C000000015781"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1292",
+		"statementDate": "2024-09-01",
+		"statementId": "C000000015782"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1293",
+		"statementDate": "2024-08-01",
+		"statementId": "C000000015783"
+	},
+	{
+		"agentNumber": "638",
+		"divisionNumber": "35",
+		"documentType": "Broker Stmt",
+		"id": "92 3 ICM8 ICMDEVDB12 ProducerStmt59 26 A1001001A17B23B31738D0009718 A17B23B31738D000971 14 1294",
+		"statementDate": "2024-07-01",
+		"statementId": "C000000015784"
+	}
+]

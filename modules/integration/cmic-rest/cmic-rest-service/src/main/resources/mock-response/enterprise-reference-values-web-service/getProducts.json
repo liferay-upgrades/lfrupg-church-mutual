@@ -1,0 +1,184 @@
+[
+  {
+    "refAbrreviation": null,
+    "refDescription": "Invalid Value",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": -1
+  },
+  {
+    "refAbrreviation": "01",
+    "refDescription": "DWELLING FIRE",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 1
+  },
+  {
+    "refAbrreviation": "02",
+    "refDescription": "COMMERCIAL PACKAGE POLICY - A SERIES",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 2
+  },
+  {
+    "refAbrreviation": "04",
+    "refDescription": "HOMEOWNERS",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 3
+  },
+  {
+    "refAbrreviation": "05",
+    "refDescription": "COMMERCIAL PACKAGE POLICY - SPECIAL MULTIPERIL",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 4
+  },
+  {
+    "refAbrreviation": "06",
+    "refDescription": "INLAND MARINE",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 5
+  },
+  {
+    "refAbrreviation": "07",
+    "refDescription": "WORKERS' COMPENSATION",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 6
+  },
+  {
+    "refAbrreviation": "08",
+    "refDescription": "GENERAL LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 7
+  },
+  {
+    "refAbrreviation": "09",
+    "refDescription": "COMMERCIAL AUTOMOBILE",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 8
+  },
+  {
+    "refAbrreviation": "10",
+    "refDescription": "FIDELITY BOND",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 9
+  },
+  {
+    "refAbrreviation": "12",
+    "refDescription": "CRIME & THEFT",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 10
+  },
+  {
+    "refAbrreviation": "13",
+    "refDescription": "PROPERTY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 11
+  },
+  {
+    "refAbrreviation": "14",
+    "refDescription": "CLERGY HOMEOWNERS",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 12
+  },
+  {
+    "refAbrreviation": "21",
+    "refDescription": "COMMERCIAL PACKAGE POLICY - E SERIES",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 13
+  },
+  {
+    "refAbrreviation": "25",
+    "refDescription": "COMMERCIAL PACKAGE POLICY - PREMIER",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 14
+  },
+  {
+    "refAbrreviation": "31",
+    "refDescription": "MISCELLANEOUS PROFESSIONAL LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 15
+  },
+  {
+    "refAbrreviation": "32",
+    "refDescription": "EMPLOYMENT PRACTICES LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 16
+  },
+  {
+    "refAbrreviation": "33",
+    "refDescription": "MANAGEMENT PROTECTION LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 17
+  },
+  {
+    "refAbrreviation": "34",
+    "refDescription": "MEDICAL PROFESSIONAL LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 18
+  },
+  {
+    "refAbrreviation": "35",
+    "refDescription": "EDUCATORS PROFESSIONAL LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 19
+  },
+  {
+    "refAbrreviation": "61",
+    "refDescription": "DATA PROCESSING POLICY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 20
+  },
+  {
+    "refAbrreviation": "81",
+    "refDescription": "UMBRELLA 81",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 21
+  },
+  {
+    "refAbrreviation": "82",
+    "refDescription": "DIRECTORS, OFFICERS & TRUSTEES LIABILITY",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 22
+  },
+  {
+    "refAbrreviation": "85",
+    "refDescription": "UMBRELLA 85",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 23
+  },
+  {
+    "refAbrreviation": "86",
+    "refDescription": "COMMERCIAL PACKAGE POLICY - EDUCATIONAL",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 24
+  },
+  {
+    "refAbrreviation": "87",
+    "refDescription": "EXCESS - EDUCATIONAL",
+    "metaRowEffDate": "1897-03-04 00:00:00",
+    "metaRowExpDate": "9999-12-31 23:59:59",
+    "refProductId": 25
+  }
+]
