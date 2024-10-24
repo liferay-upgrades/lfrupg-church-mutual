@@ -60,16 +60,16 @@ public class MockPortalUserWebServiceClient {
 
 	public CMICUserDTO getUserDetails(long cmicUserId) {
 		String fileName = "";
-		if (cmicUserId == 1086) {
-			fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetails.json";
-		} else if (cmicUserId == 1860) {
-			fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsMember.json";
-		} else if (cmicUserId == 1096) {
-			fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsInsuredMember.json";
-		}else {
-			fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsInsured.json";
-		}
-
+		
+        if (cmicUserId == 1086) {
+            fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetails.json";
+        } else if (cmicUserId == 1860) {
+            fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsMember.json";
+        } else if (cmicUserId == 1096) {
+            fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsInsuredMember.json";
+        } else {
+            fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getUserDetailsInsured.json";
+        }
 
 		String fileContent = MockResponseReaderUtil.readFile(fileName);
 
@@ -134,20 +134,57 @@ public class MockPortalUserWebServiceClient {
 		return getProducerUser();
 	}
 
-	public CMICUserDTO validateInsuredUserRegistration() {
-		return getInsuredUser();
+	public String validateInsuredUserRegistration(long cmicUserId, String accountNumber, String companyNumber, String registrationCode, String cmicUUID,
+                                                  String zipCode) {
+        String fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getInsuredUser.json";
+        String fileContent = MockResponseReaderUtil.readFile(fileName);
+
+        CMICUserDTO insuredUser = getInsuredUser();
+        String zipCodeExpected = "54481";
+
+        if (accountNumber.equals(insuredUser.getAccounts().get(0).getAccountNumber()) && registrationCode.equals(insuredUser.getRegistrationCode()) && zipCode.equals(zipCodeExpected)) {
+            return fileContent;
+        } else {
+            return null;
+        }
 	}
 
-	public CMICUserDTO validateProducerUserRegistration() {
-		return getProducerUser();
+	public String validateProducerUserRegistration(long cmicUserId, String agentNumber, String divisionNumber, String registrationCode, String cmicUUID,
+                                                        String zipCode) {
+        String fileName = _PORTAL_USER_WEB_SERVICE_DIR + "getProducerUser.json";
+
+        String fileContent = MockResponseReaderUtil.readFile(fileName);
+
+        CMICUserDTO producerUser = getProducerUser();
+        String zipCodeExpected = "48152";
+
+        if (agentNumber.equals(producerUser.getOrganizations().get(0).getAgentNumber()) && divisionNumber.equals(producerUser.getOrganizations().get(0).getDivisionNumber()) && registrationCode.equals(producerUser.getRegistrationCode()) && zipCode.equals(zipCodeExpected)) {
+            return fileContent;
+        } else {
+            return null;
+        }
 	}
 
-	public CMICUserDTO validateUser(String registrationCode) {
+	public String validateUser(String registrationCode) {
 		if (_ERROR.equals(registrationCode)) {
 			return null;
 		}
+        String insuredFileName = _PORTAL_USER_WEB_SERVICE_DIR + "getInsuredUser.json";
 
-		return getProducerUser();
+        String insuredFileContent = MockResponseReaderUtil.readFile(insuredFileName);
+
+        String producerFileName = _PORTAL_USER_WEB_SERVICE_DIR + "getProducerUser.json";
+
+        String producerFileContent = MockResponseReaderUtil.readFile(producerFileName);
+
+        CMICUserDTO insuredUser = getInsuredUser();
+        CMICUserDTO producerUser = getProducerUser();
+        if (insuredUser.getRegistrationCode().equals(registrationCode)) {
+            return insuredFileContent;
+        } else if (producerUser.getRegistrationCode().equals(registrationCode)) {
+            return producerFileContent;
+        }
+        return null;
 	}
 
 	protected CMICUserDTO getInsuredUser() {

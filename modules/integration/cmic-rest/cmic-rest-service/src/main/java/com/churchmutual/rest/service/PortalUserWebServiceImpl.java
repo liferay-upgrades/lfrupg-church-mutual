@@ -10,32 +10,18 @@ import com.churchmutual.rest.model.CMICInsuredUserDTO;
 import com.churchmutual.rest.model.CMICProducerUserDTO;
 import com.churchmutual.rest.model.CMICUserDTO;
 import com.churchmutual.rest.service.mock.MockPortalUserWebServiceClient;
-
 import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
 import com.liferay.portal.kernel.cache.PortalCache;
 import com.liferay.portal.kernel.cache.SingleVMPool;
 import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.json.JSONArray;
-import com.liferay.portal.kernel.json.JSONDeserializer;
-import com.liferay.portal.kernel.json.JSONFactory;
-import com.liferay.portal.kernel.json.JSONFactoryUtil;
-import com.liferay.portal.kernel.json.JSONObject;
+import com.liferay.portal.kernel.json.*;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
+import org.osgi.service.component.annotations.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Modified;
-import org.osgi.service.component.annotations.Reference;
+import java.util.*;
 
 /**
  * @author Kayleen Lim
@@ -617,46 +603,48 @@ public class PortalUserWebServiceImpl implements PortalUserWebService {
 			long cmicUserId, String accountNumber, String companyNumber, String registrationCode, String cmicUUID,
 			String zipCode)
 		throws PortalException {
-
+        String response = null;
 		if (_mockPortalUserWebServiceConfiguration.enableMockValidateInsuredUser()) {
-			return _mockPortalUserWebServiceClient.validateInsuredUserRegistration();
-		}
+			response =  _mockPortalUserWebServiceClient.validateInsuredUserRegistration(cmicUserId, accountNumber, companyNumber, registrationCode, cmicUUID,
+                    zipCode);
+            _log.debug(response);
+		} else {
+            String url = StringUtil.replace(
+                    _VALIDATE_INSURED_USER_REGISTRATION_URL, "{{USER_ID}}", String.valueOf(cmicUserId));
 
-		String url = StringUtil.replace(
-			_VALIDATE_INSURED_USER_REGISTRATION_URL, "{{USER_ID}}", String.valueOf(cmicUserId));
+            JSONObject body = _jsonFactory.createJSONObject();
 
-		JSONObject body = _jsonFactory.createJSONObject();
+            body.put("accountNumber", accountNumber);
+            body.put("companyNumber", companyNumber);
+            body.put("registrationCode", registrationCode);
+            body.put("uuid", cmicUUID);
+            body.put("zipCode", zipCode);
 
-		body.put("accountNumber", accountNumber);
-		body.put("companyNumber", companyNumber);
-		body.put("registrationCode", registrationCode);
-		body.put("uuid", cmicUUID);
-		body.put("zipCode", zipCode);
+            try {
+                response = _webServiceExecutor.executePut(url, body.toString());
+            }
+            catch (WebServiceException wse) {
+                if (wse.getResponseCode() == _UNPROCESSABLE_ENTITY_STATUS_CODE) {
+                    JSONObject payload = JSONFactoryUtil.createJSONObject(wse.getPayload());
 
-		String response = null;
+                    JSONArray errorsArray = payload.getJSONArray("errors");
 
-		try {
-			response = _webServiceExecutor.executePut(url, body.toString());
-		}
-		catch (WebServiceException wse) {
-			if (wse.getResponseCode() == _UNPROCESSABLE_ENTITY_STATUS_CODE) {
-				JSONObject payload = JSONFactoryUtil.createJSONObject(wse.getPayload());
+                    for (int i = 0; i < errorsArray.length(); i++) {
+                        String error = errorsArray.getString(i);
 
-				JSONArray errorsArray = payload.getJSONArray("errors");
+                        if (error.contains(_CMIC_ZIP_CODE_ERROR_RESPONSE)) {
+                            throw new UserRegistrationException(UserRegistrationException.ZIP_CODE);
+                        }
+                    }
 
-				for (int i = 0; i < errorsArray.length(); i++) {
-					String error = errorsArray.getString(i);
+                    throw new UserRegistrationException(UserRegistrationException.ACCOUNT_NUMBER);
+                }
 
-					if (error.contains(_CMIC_ZIP_CODE_ERROR_RESPONSE)) {
-						throw new UserRegistrationException(UserRegistrationException.ZIP_CODE);
-					}
-				}
+                throw wse;
+            }
+        }
 
-				throw new UserRegistrationException(UserRegistrationException.ACCOUNT_NUMBER);
-			}
 
-			throw wse;
-		}
 
 		JSONDeserializer<CMICUserDTO> jsonDeserializer = _jsonFactory.createJSONDeserializer();
 
@@ -680,46 +668,50 @@ public class PortalUserWebServiceImpl implements PortalUserWebService {
 			long cmicUserId, String agentNumber, String divisionNumber, String registrationCode, String cmicUUID,
 			String zipCode)
 		throws PortalException {
-
+        String response = "";
 		if (_mockPortalUserWebServiceConfiguration.enableMockValidateProducerUser()) {
-			return _mockPortalUserWebServiceClient.validateProducerUserRegistration();
-		}
+			response =  _mockPortalUserWebServiceClient.validateProducerUserRegistration(cmicUserId, agentNumber, divisionNumber, registrationCode, cmicUUID,
+                    zipCode);
+            _log.debug(response);
+		} else {
+            String url = StringUtil.replace(
+                    _VALIDATE_PRODUCER_USER_REGISTRATION_URL, "{{USER_ID}}", String.valueOf(cmicUserId));
 
-		String url = StringUtil.replace(
-			_VALIDATE_PRODUCER_USER_REGISTRATION_URL, "{{USER_ID}}", String.valueOf(cmicUserId));
+            JSONObject body = _jsonFactory.createJSONObject();
 
-		JSONObject body = _jsonFactory.createJSONObject();
+            body.put("agentNumber", agentNumber);
+            body.put("divisionNumber", divisionNumber);
+            body.put("registrationCode", registrationCode);
+            body.put("uuid", cmicUUID);
+            body.put("zipCode", zipCode);
 
-		body.put("agentNumber", agentNumber);
-		body.put("divisionNumber", divisionNumber);
-		body.put("registrationCode", registrationCode);
-		body.put("uuid", cmicUUID);
-		body.put("zipCode", zipCode);
 
-		String response = null;
 
-		try {
-			response = _webServiceExecutor.executePut(url, body.toString());
-		}
-		catch (WebServiceException wse) {
-			if (wse.getResponseCode() == _UNPROCESSABLE_ENTITY_STATUS_CODE) {
-				JSONObject payload = JSONFactoryUtil.createJSONObject(wse.getPayload());
+            try {
+                response = _webServiceExecutor.executePut(url, body.toString());
+            }
+            catch (WebServiceException wse) {
+                if (wse.getResponseCode() == _UNPROCESSABLE_ENTITY_STATUS_CODE) {
+                    JSONObject payload = JSONFactoryUtil.createJSONObject(wse.getPayload());
 
-				JSONArray errorsArray = payload.getJSONArray("errors");
+                    JSONArray errorsArray = payload.getJSONArray("errors");
 
-				for (int i = 0; i < errorsArray.length(); i++) {
-					String error = errorsArray.getString(i);
+                    for (int i = 0; i < errorsArray.length(); i++) {
+                        String error = errorsArray.getString(i);
 
-					if (error.contains(_CMIC_ZIP_CODE_ERROR_RESPONSE)) {
-						throw new UserRegistrationException(UserRegistrationException.ZIP_CODE);
-					}
-				}
+                        if (error.contains(_CMIC_ZIP_CODE_ERROR_RESPONSE)) {
+                            throw new UserRegistrationException(UserRegistrationException.ZIP_CODE);
+                        }
+                    }
 
-				throw new UserRegistrationException(UserRegistrationException.PRODUCER_CODE);
-			}
+                    throw new UserRegistrationException(UserRegistrationException.PRODUCER_CODE);
+                }
 
-			throw wse;
-		}
+                throw wse;
+            }
+        }
+
+
 
 		JSONDeserializer<CMICUserDTO> jsonDeserializer = _jsonFactory.createJSONDeserializer();
 
@@ -740,20 +732,20 @@ public class PortalUserWebServiceImpl implements PortalUserWebService {
 
 	@Override
 	public CMICUserDTO validateUserRegistrationCode(String registrationCode) throws PortalException {
+        String response = "";
 		if (_mockPortalUserWebServiceConfiguration.enableMockValidateUser()) {
-			return _mockPortalUserWebServiceClient.validateUser(registrationCode);
-		}
+			response =  _mockPortalUserWebServiceClient.validateUser(registrationCode);
+		} else {
 
-		Map<String, String> queryParameters = new HashMap<>();
+            Map<String, String> queryParameters = new HashMap<>();
 
-		queryParameters.put("registrationCode", registrationCode);
+            queryParameters.put("registrationCode", registrationCode);
 
-		String response = _webServiceExecutor.executeGet(_VALIDATE_USER_URL, queryParameters);
+            response = _webServiceExecutor.executeGet(_VALIDATE_USER_URL, queryParameters);
 
-		JSONDeserializer<CMICUserDTO> jsonDeserializer = _jsonFactory.createJSONDeserializer();
-
-		CMICUserDTO cmicUserDTO = null;
-
+        }
+        CMICUserDTO cmicUserDTO = null;
+        JSONDeserializer<CMICUserDTO> jsonDeserializer = _jsonFactory.createJSONDeserializer();
 		try {
 			cmicUserDTO = jsonDeserializer.deserialize(response, CMICUserDTO.class);
 		}
