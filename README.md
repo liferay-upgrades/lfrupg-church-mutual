@@ -69,6 +69,16 @@ Navigate to http://localhost:8080/c/portal/login and log in with the provided cr
 
 Under Control Panel --> System Settings --> Church Mutual, there is a list of mock service items that are all enabled by default. These are used in place of the regular service calls to the client's APIs and can be verified by reviewing the functionality of the application. Ensure these are all enabled as the portal administrator before beginning validation.
 
+### Registration Mock Services
+When validating the mock service `/group/registration`, you will need to use the following information for the sample users:
+1. **Insured Owner**
+   1. <u>Registration Code</u>: 67yxUZao
+   2. <u>Account Number</u>: 0000015
+   3. <u>Zip Code</u>: 54481
+2. **Producer Owner**
+   1. <u>Registration Code</u>: w3s7gWqy
+   2. <u>Producer Code</u>: 12-123
+   3. <u>Zip Code</u>: 48152
 
 ## Additional Information
 A few error logs may be seen during validation but can be ignored for the purposes of validation.
